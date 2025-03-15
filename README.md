@@ -3,6 +3,9 @@
 ## Description
 The Age Calculator is a React-based web application that allows users to calculate their age in years, months, and days based on their date of birth. This tool helps users easily determine their precise age difference from a given date.
 
+## Live Demo
+https://age-calculator-pe0s.onrender.com
+
 ## Features
 - User-friendly interface for inputting birth date.
 - Calculates age in **years, months, and days**.
@@ -19,7 +22,6 @@ The Age Calculator is a React-based web application that allows users to calcula
 - React.js
 - HTML5
 - CSS3
-- JavaScript
 
 ## Installation
 1. Clone the repository:
@@ -47,10 +49,3 @@ The Age Calculator is a React-based web application that allows users to calcula
 
 ## Contributing
 Contributions are welcome! If you'd like to improve the app, feel free to fork the repository and submit a pull request.
-
-## License
-This project is licensed under the MIT License.
-
----
-Feel free to customize the README further as needed!
-
