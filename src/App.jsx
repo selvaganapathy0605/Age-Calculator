@@ -11,7 +11,6 @@ function App() {
   let [year, setYear] = useState('')
 
   const today = new Date();
-  const curday = today.getDate()
   const schema = yup.object().shape({
     date: yup.number().required('Date is Required*').min(1, 'Enter the Valid Birth Date in Numberical*').max(31, 'Maximum Date is 31*'),
     month: yup.number().required('Month is requires*').min(1, "Enter Your Valid Birth Month in Numberical*").max(12, 'Maximum Month is 12*'),
@@ -33,20 +32,16 @@ function App() {
         if (data.month > today.getMonth()){
           setYear(Math.abs(today.getFullYear() - data.year)-1)
           setMonth((today.getMonth() - data.month)+12)
+          setDate(today.getDate() - data.date)
         }
         if(data.date > today.getDate()){
           const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
           setDate(date += prevMonth.getDate())
         }
-        else{
-          setYear(Math.abs(today.getFullYear() - data.year))
-          setMonth(Math.abs(today.getMonth()-data.month))
-          setDate(Math.abs(today.getDate()-date.data))
-        }
       })}>
         <div className="input-container">
           <div className="input-boxs">
-            {errors?.day && <div className='error'>{errors.day.message}</div>}
+            {errors?.date && <div className='error'>{errors.date.message}</div>}
             <label htmlFor="day">DAY</label>
             <input type="text" name="day" id="day" {...register('date')} placeholder="DD" />
           </div>
